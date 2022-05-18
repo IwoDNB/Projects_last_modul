@@ -1,0 +1,244 @@
+// This is where you can import other stylesheets or write your scss code
+@import './_variables';
+@import './_typography';
+@import './_layout';
+
+
+@mixin center_f {
+    display: flex;
+    justify-content: center;
+
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+    
+    ul {
+        display: flex;
+        justify-content: center;
+
+
+        .disabled {
+            display: none;
+        }
+
+
+    }
+
+    header {
+        @include center_f;
+        align-items: center;
+
+        h1 {
+            font-weight: bold
+        }
+
+    }
+
+    .cards {
+        padding: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+            .card {
+           
+                border: 2px solid $border-color;
+                background-color: $card-gb;
+                padding: 2rem;
+        }
+        
+    }
+
+    main {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        article {
+            margin: 1rem;
+        }
+
+        aside {
+            margin: 1rem;
+        }
+
+    }
+
+    footer {
+        ul {
+            display: flex;
+            justify-content: space-around;
+            padding: 2rem;
+
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+    }
+
+
+}
+
+@media screen and (min-width: 768px) {
+
+    ul {
+        display: flex;
+        justify-content: end;
+
+
+        .disabled {
+            display: none;
+        }
+
+
+    }
+
+    header {
+        @include center_f;
+
+
+        h1 {
+            margin-top: 2rem;
+            font-weight: bold
+        }
+
+    }
+
+    .cards {
+        padding: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .card {
+            border: 2px solid $border-color;
+            background-color: $card-gb;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            width: 80%;
+
+            .card-img-top {
+                width: 100%;
+            }
+
+            h5 {
+                font-weight: bold
+            }
+
+
+        }
+    }
+
+    main {
+        padding: 2rem;
+
+        aside {
+            border: 2px solid $border-color;
+            width: 40%;
+        }
+
+        article {
+            margin: 0 1rem;
+            width: 100%;
+        }
+    }
+
+
+
+    footer {
+        ul {
+            @include center_f;
+            padding: 1rem;
+
+
+            li {
+
+                margin-left: 2rem;
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+    }
+
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    .cards {
+
+        
+        display: flex;
+        flex-direction: row;
+
+
+        .card {
+            height: 10rem;
+            width: 45%;
+
+            .card-img-top {
+                width: 50%;
+            }
+
+            h5 {
+                font-weight: bold
+            }
+
+
+        }
+    }
+
+
+}
+
+
+
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+
+
+// // Custom.scss
+// // Option B: Include parts of Bootstrap
+
+
+
+// // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+// @import "../node_modules/bootstrap/scss/functions";
+
+// // 2. Include any default variable overrides here
+
+// // 3. Include remainder of required Bootstrap stylesheets
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+
+// // 4. Include any optional Bootstrap components as you like
+// @import "../node_modules/bootstrap/scss/root";
+// @import "../node_modules/bootstrap/scss/reboot";
+// @import "../node_modules/bootstrap/scss/type";
+// @import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/containers";
+// @import "../node_modules/bootstrap/scss/grid";
+
+
+// // 5. Add additional custom code here
